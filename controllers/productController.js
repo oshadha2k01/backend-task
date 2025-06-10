@@ -22,7 +22,7 @@ exports.getProducts = async (req, res) => {
     }
 };
 
-// Get Single Product
+// Get One Product
 exports.getProductById = async (req, res) => {
     try {
         const product = await Product.findById(req.params.id);

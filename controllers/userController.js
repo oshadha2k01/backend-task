@@ -1,6 +1,6 @@
 const User = require('../models/User');
 
-// Register
+// Register User 
 exports.registerUser = async (req, res) => {
     try {
         const { username, password } = req.body;
@@ -19,7 +19,7 @@ exports.registerUser = async (req, res) => {
     }
 };
 
-// Login (validate both username and password using bcrypt)
+// Login User
 exports.loginUser = async (req, res) => {
     try {
         const { username, password } = req.body;

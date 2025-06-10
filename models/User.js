@@ -6,10 +6,10 @@ const userSchema = new mongoose.Schema({
     password: { type: String, required: true }
 });
 
-// Pre-save hook to hash password
+// Hash password
 userSchema.pre('save', async function(next) {
     try {
-        // Only hash if password is new or modified
+        
         if (!this.isModified('password')) return next();
 
         // Generate salt
@@ -22,7 +22,7 @@ userSchema.pre('save', async function(next) {
     }
 });
 
-// Method to compare password for login
+//ompare password for login
 userSchema.methods.matchPassword = async function(enteredPassword) {
     return await bcrypt.compare(enteredPassword, this.password);
 };
