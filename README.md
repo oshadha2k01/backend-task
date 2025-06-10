@@ -1,4 +1,4 @@
-# Backend Assignment REST API
+# Backend REST API
 
 A Node.js + Express REST API for user registration/login and product CRUD operations, using MongoDB and secure password hashing.
 
